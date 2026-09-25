@@ -1,0 +1,4 @@
+# Local scratch / editor cruft
+.DS_Store
+*.log
+Thumbs.db
