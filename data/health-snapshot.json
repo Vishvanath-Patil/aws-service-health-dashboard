@@ -1,9 +1,500 @@
 {
-  "generated_at_unix": 1791119019,
-  "generated_at_iso": "2026-10-04T13:03:39.697552+00:00",
+  "generated_at_unix": 1791135931,
+  "generated_at_iso": "2026-10-04T17:45:31.980513+00:00",
   "source": "https://health.aws.amazon.com/public/currentevents",
-  "event_count": 2,
+  "event_count": 3,
   "events": [
+    {
+      "event_id": "AWS_INTERNETCONNECTIVITY_OPERATIONAL_ISSUE_F4DC4_40592306093",
+      "arn": "arn:aws:health:eu-south-2::event/INTERNETCONNECTIVITY/AWS_INTERNETCONNECTIVITY_OPERATIONAL_ISSUE/AWS_INTERNETCONNECTIVITY_OPERATIONAL_ISSUE_F4DC4_40592306093",
+      "service": "internetconnectivity-eu-south-2",
+      "service_name": "AWS Internet Connectivity",
+      "region": "eu-south-2",
+      "region_name": "Spain",
+      "status": 1,
+      "status_label": "Informational",
+      "summary": "Elevated packet loss",
+      "date_unix": 1791130496,
+      "date_iso": "2026-10-04T16:14:56+00:00",
+      "event_log": [
+        {
+          "summary": "Elevated packet loss",
+          "message": "We are investigating elevated packet loss in the EU-SOUTH-2 Region.",
+          "status": 1,
+          "status_label": "Informational",
+          "timestamp_unix": 1791130496,
+          "timestamp_iso": "2026-10-04T16:14:56+00:00"
+        },
+        {
+          "summary": "Elevated packet loss",
+          "message": "We are experiencing elevated packet loss with a single Availability Zone (eus2-az1) in the EU-SOUTH-2 Region. This issue is also resulting in elevated API latencies and error rates for other workflows and AWS Services. Engineers were automatically engaged and are working to identify the root cause and to mitigate the issue. We will provide you with another update by 10:15 AM PDT or sooner as new information becomes available.",
+          "status": 1,
+          "status_label": "Informational",
+          "timestamp_unix": 1791131808,
+          "timestamp_iso": "2026-10-04T16:36:48+00:00"
+        },
+        {
+          "summary": "Elevated packet loss",
+          "message": "Our efforts to mitigate the elevated packet loss with a single Availability Zone (eus2-az1) in the EU-SOUTH-2 Region is still underway. We are seeing some signs of improvement as a result of multiple parallel efforts. We continue to work to confirm root cause and fully mitigate the issue. While we currently do not have an estimate for how long our actions will take, we will keep you informed of our progress and provide you with another update by 11:00 AM PDT or sooner as new information becomes available.",
+          "status": 1,
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        }
+      ],
+      "impacted_services": [
+        {
+          "service": "awsiot-eu-south-2",
+          "service_name": "AWS IoT Core",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "awsiotdevicemanagement",
+          "service_name": "AWS IoT Device Management",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "awswaf-eu-south-2",
+          "service_name": "AWS WAF",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "bedrock-agentcore-eu-south-2",
+          "service_name": "Bedrock AgentCore",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "certificatemanager-eu-south-2",
+          "service_name": "AWS Certificate Manager",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "cloudtrail-eu-south-2",
+          "service_name": "AWS CloudTrail",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "cloudwan",
+          "service_name": "AWS Cloud WAN",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "cognito-eu-south-2",
+          "service_name": "Amazon Cognito",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "directconnect-eu-south-2",
+          "service_name": "AWS Direct Connect",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "dynamodb-eu-south-2",
+          "service_name": "Amazon DynamoDB",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "ec2-eu-south-2",
+          "service_name": "Amazon Elastic Compute Cloud",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "ec2systemsmanager-eu-south-2",
+          "service_name": "AWS Systems Manager",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "ecs-eu-south-2",
+          "service_name": "Amazon Elastic Container Service",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "elasticfilesystem-eu-south-2",
+          "service_name": "Amazon Elastic File System",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "elb-eu-south-2",
+          "service_name": "Amazon Elastic Load Balancing",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "emr-eu-south-2",
+          "service_name": "Amazon Elastic MapReduce",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "fargate-eu-south-2",
+          "service_name": "AWS Fargate",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "glue-eu-south-2",
+          "service_name": "AWS Glue",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "natgateway-eu-south-2",
+          "service_name": "AWS NAT Gateway",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "networkfirewall-eu-south-2",
+          "service_name": "AWS Network Firewall",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "pcs-eu-south-2",
+          "service_name": "AWS Parallel Computing Service",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "privatelink-eu-south-2",
+          "service_name": "AWS VPCE PrivateLink",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "redshift-eu-south-2",
+          "service_name": "Amazon Redshift",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "sagemaker-eu-south-2",
+          "service_name": "Amazon SageMaker",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "state-eu-south-2",
+          "service_name": "AWS Step Functions",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "transfer-eu-south-2",
+          "service_name": "AWS Transfer Family",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "transitgateway-eu-south-2",
+          "service_name": "AWS Transit Gateway",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "vpc-eu-south-2",
+          "service_name": "Amazon Virtual Private Cloud",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        }
+      ],
+      "status_changes": [
+        {
+          "service": "awsiot-eu-south-2",
+          "service_name": "AWS IoT Core",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        },
+        {
+          "service": "awsiotdevicemanagement",
+          "service_name": "AWS IoT Device Management",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        },
+        {
+          "service": "awswaf-eu-south-2",
+          "service_name": "AWS WAF",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        },
+        {
+          "service": "bedrock-agentcore-eu-south-2",
+          "service_name": "Bedrock AgentCore",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        },
+        {
+          "service": "certificatemanager-eu-south-2",
+          "service_name": "AWS Certificate Manager",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        },
+        {
+          "service": "cloudtrail-eu-south-2",
+          "service_name": "AWS CloudTrail",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        },
+        {
+          "service": "cloudwan",
+          "service_name": "AWS Cloud WAN",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        },
+        {
+          "service": "cognito-eu-south-2",
+          "service_name": "Amazon Cognito",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        },
+        {
+          "service": "directconnect-eu-south-2",
+          "service_name": "AWS Direct Connect",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        },
+        {
+          "service": "dynamodb-eu-south-2",
+          "service_name": "Amazon DynamoDB",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        },
+        {
+          "service": "ec2-eu-south-2",
+          "service_name": "Amazon Elastic Compute Cloud",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        },
+        {
+          "service": "ec2systemsmanager-eu-south-2",
+          "service_name": "AWS Systems Manager",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        },
+        {
+          "service": "ecs-eu-south-2",
+          "service_name": "Amazon Elastic Container Service",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        },
+        {
+          "service": "elasticfilesystem-eu-south-2",
+          "service_name": "Amazon Elastic File System",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        },
+        {
+          "service": "elb-eu-south-2",
+          "service_name": "Amazon Elastic Load Balancing",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        },
+        {
+          "service": "emr-eu-south-2",
+          "service_name": "Amazon Elastic MapReduce",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        },
+        {
+          "service": "fargate-eu-south-2",
+          "service_name": "AWS Fargate",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        },
+        {
+          "service": "glue-eu-south-2",
+          "service_name": "AWS Glue",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        },
+        {
+          "service": "natgateway-eu-south-2",
+          "service_name": "AWS NAT Gateway",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        },
+        {
+          "service": "networkfirewall-eu-south-2",
+          "service_name": "AWS Network Firewall",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        },
+        {
+          "service": "pcs-eu-south-2",
+          "service_name": "AWS Parallel Computing Service",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        },
+        {
+          "service": "privatelink-eu-south-2",
+          "service_name": "AWS VPCE PrivateLink",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        },
+        {
+          "service": "redshift-eu-south-2",
+          "service_name": "Amazon Redshift",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        },
+        {
+          "service": "sagemaker-eu-south-2",
+          "service_name": "Amazon SageMaker",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        },
+        {
+          "service": "state-eu-south-2",
+          "service_name": "AWS Step Functions",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        },
+        {
+          "service": "transfer-eu-south-2",
+          "service_name": "AWS Transfer Family",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        },
+        {
+          "service": "transitgateway-eu-south-2",
+          "service_name": "AWS Transit Gateway",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        },
+        {
+          "service": "vpc-eu-south-2",
+          "service_name": "Amazon Virtual Private Cloud",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1791133574000,
+          "timestamp_iso": "2026-10-04T17:06:14+00:00"
+        }
+      ]
+    },
     {
       "event_id": "AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE_5E6B8_EF2498889B5",
       "arn": "arn:aws:health:me-central-1::event/MULTIPLE_SERVICES/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE_5E6B8_EF2498889B5",
