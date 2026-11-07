@@ -1,6 +1,6 @@
 {
-  "generated_at_unix": 1794008530,
-  "generated_at_iso": "2026-11-06T23:42:10.365948+00:00",
+  "generated_at_unix": 1794027418,
+  "generated_at_iso": "2026-11-07T04:56:58.370698+00:00",
   "source": "https://health.aws.amazon.com/public/currentevents",
   "event_count": 3,
   "events": [
@@ -11,9 +11,9 @@
       "service_name": "Amazon Elastic Compute Cloud",
       "region": "us-west-2",
       "region_name": "Oregon",
-      "status": 1,
-      "status_label": "Informational",
-      "summary": "Elevated Launch Failures",
+      "status": 0,
+      "status_label": "Normal",
+      "summary": "[RESOLVED] Elevated Launch Failures",
       "date_unix": 1794005465,
       "date_iso": "2026-11-06T22:51:05+00:00",
       "event_log": [
@@ -32,110 +32,277 @@
           "status_label": "Informational",
           "timestamp_unix": 1794007152,
           "timestamp_iso": "2026-11-06T23:19:12+00:00"
+        },
+        {
+          "summary": "Elevated Launch Failures",
+          "message": "We can confirm EC2 instance launch failures affecting all AZs (usw2-az1, usw2-az2, usw2-az3, usw2-az4) in the US-WEST-2 Region. We have identified the issue to be caused by a  subsystem that supports EBS Volumes required during instance launch. Services that instantiate new instances, such as cross-region data copy for DataSync, within the US-WEST-2 Region as either the source or destination are also affected. We recommend that customers do not mutate running instances at this time that would result in the replacement or creation of a new EC2 instance in the Region. Running EC2 instances and already created EBS volumes continue to operate as normal. \n\nWe are seeing early signs of recovery, and continue to take steps to restore launches within the Region. We will update this post by 5:30 PM PST or earlier if we have new information to share.",
+          "status": 1,
+          "status_label": "Informational",
+          "timestamp_unix": 1794010112,
+          "timestamp_iso": "2026-11-07T00:08:32+00:00"
+        },
+        {
+          "summary": "[RESOLVED] Elevated Launch Failures",
+          "message": "Between 2:35 PM and 4:21 PM PST, we experienced elevated EC2 instance launch failures affecting all AZs (usw2-az1, usw2-az2, usw2-az3, usw2-az4) in the US-WEST-2 Region. EC2 Instance Launches, AWS services that instantiated new instances, as well as services such as DataSync or AWS Backup which require new instances to support data transfers to or from the US-WEST-2 Region were affected. Our engineers were automatically engaged and immediately began investigating the root cause. We identified the issue to be caused by a subsystem that supports EBS Volumes required during instance launch. We began remediation of that issue at 3:20 PM, and completed full recovery at 4:21 PM. We recommend customers retry requests that failed during this time. Running EC2 instances and already created EBS volumes were not impacted and continued to operate as normal. The issue has been resolved and all AWS services are now operating normally.",
+          "status": 0,
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
         }
       ],
       "impacted_services": [
         {
+          "service": "airflow-us-west-2",
+          "service_name": "Amazon Managed Workflows for Apache Airflow",
+          "current": 0,
+          "max": 1,
+          "status_label": "Normal"
+        },
+        {
           "service": "appstream2-us-west-2",
           "service_name": "Amazon WorkSpaces Applications",
-          "current": 1,
+          "current": 0,
           "max": 1,
-          "status_label": "Informational"
+          "status_label": "Normal"
+        },
+        {
+          "service": "backup-us-west-2",
+          "service_name": "AWS Backup",
+          "current": 0,
+          "max": 1,
+          "status_label": "Normal"
         },
         {
           "service": "batch-us-west-2",
           "service_name": "AWS Batch",
-          "current": 1,
+          "current": 0,
           "max": 1,
-          "status_label": "Informational"
+          "status_label": "Normal"
+        },
+        {
+          "service": "bedrock-agentcore-us-west-2",
+          "service_name": "Bedrock AgentCore",
+          "current": 0,
+          "max": 1,
+          "status_label": "Normal"
         },
         {
           "service": "cloudshell-us-west-2",
           "service_name": "AWS CloudShell",
-          "current": 1,
+          "current": 0,
           "max": 1,
-          "status_label": "Informational"
+          "status_label": "Normal"
+        },
+        {
+          "service": "cloudwatch-us-west-2",
+          "service_name": "Amazon CloudWatch",
+          "current": 0,
+          "max": 1,
+          "status_label": "Normal"
+        },
+        {
+          "service": "codebuild-us-west-2",
+          "service_name": "AWS CodeBuild",
+          "current": 0,
+          "max": 1,
+          "status_label": "Normal"
+        },
+        {
+          "service": "codepipeline-us-west-2",
+          "service_name": "AWS CodePipeline",
+          "current": 0,
+          "max": 1,
+          "status_label": "Normal"
+        },
+        {
+          "service": "datasync-us-west-2",
+          "service_name": "AWS DataSync",
+          "current": 0,
+          "max": 1,
+          "status_label": "Normal"
         },
         {
           "service": "devicefarm-us-west-2",
           "service_name": "AWS Device Farm",
-          "current": 1,
+          "current": 0,
           "max": 1,
-          "status_label": "Informational"
+          "status_label": "Normal"
+        },
+        {
+          "service": "docdb-us-west-2",
+          "service_name": "Amazon DocumentDB",
+          "current": 0,
+          "max": 1,
+          "status_label": "Normal"
         },
         {
           "service": "ecs-us-west-2",
           "service_name": "Amazon Elastic Container Service",
-          "current": 1,
+          "current": 0,
           "max": 1,
-          "status_label": "Informational"
+          "status_label": "Normal"
+        },
+        {
+          "service": "elasticbeanstalk-us-west-2",
+          "service_name": "AWS Elastic Beanstalk",
+          "current": 0,
+          "max": 1,
+          "status_label": "Normal"
         },
         {
           "service": "elb-us-west-2",
           "service_name": "Amazon Elastic Load Balancing",
-          "current": 1,
+          "current": 0,
           "max": 1,
-          "status_label": "Informational"
+          "status_label": "Normal"
+        },
+        {
+          "service": "elemental-us-west-2",
+          "service_name": "AWS Elemental",
+          "current": 0,
+          "max": 1,
+          "status_label": "Normal"
         },
         {
           "service": "emr-us-west-2",
           "service_name": "Amazon Elastic MapReduce",
-          "current": 1,
+          "current": 0,
           "max": 1,
-          "status_label": "Informational"
+          "status_label": "Normal"
         },
         {
           "service": "emrserverless-us-west-2",
           "service_name": "Amazon EMR Serverless",
-          "current": 1,
+          "current": 0,
           "max": 1,
-          "status_label": "Informational"
+          "status_label": "Normal"
+        },
+        {
+          "service": "events-us-west-2",
+          "service_name": "Amazon EventBridge",
+          "current": 0,
+          "max": 1,
+          "status_label": "Normal"
+        },
+        {
+          "service": "fargate-us-west-2",
+          "service_name": "AWS Fargate",
+          "current": 0,
+          "max": 1,
+          "status_label": "Normal"
+        },
+        {
+          "service": "gamelift-us-west-2",
+          "service_name": "Amazon GameLift Servers",
+          "current": 0,
+          "max": 1,
+          "status_label": "Normal"
+        },
+        {
+          "service": "gameliftstreams-us-west-2",
+          "service_name": "Amazon GameLift Streams",
+          "current": 0,
+          "max": 1,
+          "status_label": "Normal"
+        },
+        {
+          "service": "glue-us-west-2",
+          "service_name": "AWS Glue",
+          "current": 0,
+          "max": 1,
+          "status_label": "Normal"
+        },
+        {
+          "service": "healthimaging-us-west-2",
+          "service_name": "AWS HealthImaging",
+          "current": 0,
+          "max": 1,
+          "status_label": "Normal"
+        },
+        {
+          "service": "mq-us-west-2",
+          "service_name": "Amazon MQ",
+          "current": 0,
+          "max": 1,
+          "status_label": "Normal"
+        },
+        {
+          "service": "omics-us-west-2",
+          "service_name": "AWS HealthOmics",
+          "current": 0,
+          "max": 1,
+          "status_label": "Normal"
         },
         {
           "service": "pcs-us-west-2",
           "service_name": "AWS Parallel Computing Service",
-          "current": 1,
+          "current": 0,
           "max": 1,
-          "status_label": "Informational"
+          "status_label": "Normal"
         },
         {
           "service": "rds-us-west-2",
           "service_name": "Amazon Relational Database Service",
-          "current": 1,
+          "current": 0,
           "max": 1,
-          "status_label": "Informational"
+          "status_label": "Normal"
         },
         {
           "service": "sagemaker-us-west-2",
           "service_name": "Amazon SageMaker",
-          "current": 1,
+          "current": 0,
           "max": 1,
-          "status_label": "Informational"
+          "status_label": "Normal"
+        },
+        {
+          "service": "state-us-west-2",
+          "service_name": "AWS Step Functions",
+          "current": 0,
+          "max": 1,
+          "status_label": "Normal"
         },
         {
           "service": "vmimportexport-us-west-2",
           "service_name": "VM Import/Export",
-          "current": 1,
+          "current": 0,
           "max": 1,
-          "status_label": "Informational"
+          "status_label": "Normal"
         },
         {
           "service": "workspaces-us-west-2",
           "service_name": "Amazon WorkSpaces",
-          "current": 1,
+          "current": 0,
           "max": 1,
-          "status_label": "Informational"
+          "status_label": "Normal"
         }
       ],
       "status_changes": [
         {
+          "service": "airflow-us-west-2",
+          "service_name": "Amazon Managed Workflows for Apache Airflow",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
+        },
+        {
           "service": "appstream2-us-west-2",
           "service_name": "Amazon WorkSpaces Applications",
           "previous_status": "0",
           "current_status": "1",
           "status_label": "Informational",
-          "timestamp_unix": 1794007152000,
-          "timestamp_iso": "2026-11-06T23:19:12+00:00"
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
+        },
+        {
+          "service": "backup-us-west-2",
+          "service_name": "AWS Backup",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
         },
         {
           "service": "batch-us-west-2",
@@ -143,8 +310,17 @@
           "previous_status": "0",
           "current_status": "1",
           "status_label": "Informational",
-          "timestamp_unix": 1794007152000,
-          "timestamp_iso": "2026-11-06T23:19:12+00:00"
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
+        },
+        {
+          "service": "bedrock-agentcore-us-west-2",
+          "service_name": "Bedrock AgentCore",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
         },
         {
           "service": "cloudshell-us-west-2",
@@ -152,8 +328,44 @@
           "previous_status": "0",
           "current_status": "1",
           "status_label": "Informational",
-          "timestamp_unix": 1794007152000,
-          "timestamp_iso": "2026-11-06T23:19:12+00:00"
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
+        },
+        {
+          "service": "cloudwatch-us-west-2",
+          "service_name": "Amazon CloudWatch",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
+        },
+        {
+          "service": "codebuild-us-west-2",
+          "service_name": "AWS CodeBuild",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
+        },
+        {
+          "service": "codepipeline-us-west-2",
+          "service_name": "AWS CodePipeline",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
+        },
+        {
+          "service": "datasync-us-west-2",
+          "service_name": "AWS DataSync",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
         },
         {
           "service": "devicefarm-us-west-2",
@@ -161,8 +373,17 @@
           "previous_status": "0",
           "current_status": "1",
           "status_label": "Informational",
-          "timestamp_unix": 1794007152000,
-          "timestamp_iso": "2026-11-06T23:19:12+00:00"
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
+        },
+        {
+          "service": "docdb-us-west-2",
+          "service_name": "Amazon DocumentDB",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
         },
         {
           "service": "ecs-us-west-2",
@@ -170,8 +391,17 @@
           "previous_status": "0",
           "current_status": "1",
           "status_label": "Informational",
-          "timestamp_unix": 1794007152000,
-          "timestamp_iso": "2026-11-06T23:19:12+00:00"
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
+        },
+        {
+          "service": "elasticbeanstalk-us-west-2",
+          "service_name": "AWS Elastic Beanstalk",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
         },
         {
           "service": "elb-us-west-2",
@@ -179,8 +409,17 @@
           "previous_status": "0",
           "current_status": "1",
           "status_label": "Informational",
-          "timestamp_unix": 1794007152000,
-          "timestamp_iso": "2026-11-06T23:19:12+00:00"
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
+        },
+        {
+          "service": "elemental-us-west-2",
+          "service_name": "AWS Elemental",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
         },
         {
           "service": "emr-us-west-2",
@@ -188,8 +427,8 @@
           "previous_status": "0",
           "current_status": "1",
           "status_label": "Informational",
-          "timestamp_unix": 1794007152000,
-          "timestamp_iso": "2026-11-06T23:19:12+00:00"
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
         },
         {
           "service": "emrserverless-us-west-2",
@@ -197,8 +436,80 @@
           "previous_status": "0",
           "current_status": "1",
           "status_label": "Informational",
-          "timestamp_unix": 1794007152000,
-          "timestamp_iso": "2026-11-06T23:19:12+00:00"
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
+        },
+        {
+          "service": "events-us-west-2",
+          "service_name": "Amazon EventBridge",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
+        },
+        {
+          "service": "fargate-us-west-2",
+          "service_name": "AWS Fargate",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
+        },
+        {
+          "service": "gamelift-us-west-2",
+          "service_name": "Amazon GameLift Servers",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
+        },
+        {
+          "service": "gameliftstreams-us-west-2",
+          "service_name": "Amazon GameLift Streams",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
+        },
+        {
+          "service": "glue-us-west-2",
+          "service_name": "AWS Glue",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
+        },
+        {
+          "service": "healthimaging-us-west-2",
+          "service_name": "AWS HealthImaging",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
+        },
+        {
+          "service": "mq-us-west-2",
+          "service_name": "Amazon MQ",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
+        },
+        {
+          "service": "omics-us-west-2",
+          "service_name": "AWS HealthOmics",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
         },
         {
           "service": "pcs-us-west-2",
@@ -206,8 +517,8 @@
           "previous_status": "0",
           "current_status": "1",
           "status_label": "Informational",
-          "timestamp_unix": 1794007152000,
-          "timestamp_iso": "2026-11-06T23:19:12+00:00"
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
         },
         {
           "service": "rds-us-west-2",
@@ -215,8 +526,8 @@
           "previous_status": "0",
           "current_status": "1",
           "status_label": "Informational",
-          "timestamp_unix": 1794007152000,
-          "timestamp_iso": "2026-11-06T23:19:12+00:00"
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
         },
         {
           "service": "sagemaker-us-west-2",
@@ -224,8 +535,17 @@
           "previous_status": "0",
           "current_status": "1",
           "status_label": "Informational",
-          "timestamp_unix": 1794007152000,
-          "timestamp_iso": "2026-11-06T23:19:12+00:00"
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
+        },
+        {
+          "service": "state-us-west-2",
+          "service_name": "AWS Step Functions",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
         },
         {
           "service": "vmimportexport-us-west-2",
@@ -233,8 +553,8 @@
           "previous_status": "0",
           "current_status": "1",
           "status_label": "Informational",
-          "timestamp_unix": 1794007152000,
-          "timestamp_iso": "2026-11-06T23:19:12+00:00"
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
         },
         {
           "service": "workspaces-us-west-2",
@@ -242,8 +562,296 @@
           "previous_status": "0",
           "current_status": "1",
           "status_label": "Informational",
-          "timestamp_unix": 1794007152000,
-          "timestamp_iso": "2026-11-06T23:19:12+00:00"
+          "timestamp_unix": 1794005465000,
+          "timestamp_iso": "2026-11-06T22:51:05+00:00"
+        },
+        {
+          "service": "airflow-us-west-2",
+          "service_name": "Amazon Managed Workflows for Apache Airflow",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "appstream2-us-west-2",
+          "service_name": "Amazon WorkSpaces Applications",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "backup-us-west-2",
+          "service_name": "AWS Backup",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "batch-us-west-2",
+          "service_name": "AWS Batch",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "bedrock-agentcore-us-west-2",
+          "service_name": "Bedrock AgentCore",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "cloudshell-us-west-2",
+          "service_name": "AWS CloudShell",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "cloudwatch-us-west-2",
+          "service_name": "Amazon CloudWatch",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "codebuild-us-west-2",
+          "service_name": "AWS CodeBuild",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "codepipeline-us-west-2",
+          "service_name": "AWS CodePipeline",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "datasync-us-west-2",
+          "service_name": "AWS DataSync",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "devicefarm-us-west-2",
+          "service_name": "AWS Device Farm",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "docdb-us-west-2",
+          "service_name": "Amazon DocumentDB",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "ecs-us-west-2",
+          "service_name": "Amazon Elastic Container Service",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "elasticbeanstalk-us-west-2",
+          "service_name": "AWS Elastic Beanstalk",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "elb-us-west-2",
+          "service_name": "Amazon Elastic Load Balancing",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "elemental-us-west-2",
+          "service_name": "AWS Elemental",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "emr-us-west-2",
+          "service_name": "Amazon Elastic MapReduce",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "emrserverless-us-west-2",
+          "service_name": "Amazon EMR Serverless",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "events-us-west-2",
+          "service_name": "Amazon EventBridge",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "fargate-us-west-2",
+          "service_name": "AWS Fargate",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "gamelift-us-west-2",
+          "service_name": "Amazon GameLift Servers",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "gameliftstreams-us-west-2",
+          "service_name": "Amazon GameLift Streams",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "glue-us-west-2",
+          "service_name": "AWS Glue",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "healthimaging-us-west-2",
+          "service_name": "AWS HealthImaging",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "mq-us-west-2",
+          "service_name": "Amazon MQ",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "omics-us-west-2",
+          "service_name": "AWS HealthOmics",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "pcs-us-west-2",
+          "service_name": "AWS Parallel Computing Service",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "rds-us-west-2",
+          "service_name": "Amazon Relational Database Service",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "sagemaker-us-west-2",
+          "service_name": "Amazon SageMaker",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "state-us-west-2",
+          "service_name": "AWS Step Functions",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "vmimportexport-us-west-2",
+          "service_name": "VM Import/Export",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
+        },
+        {
+          "service": "workspaces-us-west-2",
+          "service_name": "Amazon WorkSpaces",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794013936000,
+          "timestamp_iso": "2026-11-07T01:12:16+00:00"
         }
       ]
     },
