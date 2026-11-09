@@ -1,6 +1,6 @@
 {
-  "generated_at_unix": 1794221909,
-  "generated_at_iso": "2026-11-09T10:58:29.972373+00:00",
+  "generated_at_unix": 1794259396,
+  "generated_at_iso": "2026-11-09T21:23:16.255255+00:00",
   "source": "https://health.aws.amazon.com/public/currentevents",
   "event_count": 2,
   "events": [
@@ -899,7 +899,7 @@
         },
         {
           "service": "quicksight-me-central-1",
-          "service_name": "Amazon Quick Suite",
+          "service_name": "AWS Quick",
           "current": 3,
           "max": 3,
           "status_label": "Disruption"
@@ -2077,7 +2077,7 @@
         },
         {
           "service": "quicksight-me-central-1",
-          "service_name": "Amazon Quick Suite",
+          "service_name": "AWS Quick",
           "previous_status": "0",
           "current_status": "3",
           "status_label": "Disruption",
