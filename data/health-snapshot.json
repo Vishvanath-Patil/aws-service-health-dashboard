@@ -1,6 +1,6 @@
 {
-  "generated_at_unix": 1794453263,
-  "generated_at_iso": "2026-11-12T03:14:23.828081+00:00",
+  "generated_at_unix": 1794483615,
+  "generated_at_iso": "2026-11-12T11:40:15.701089+00:00",
   "source": "https://health.aws.amazon.com/public/currentevents",
   "event_count": 3,
   "events": [
@@ -67,7 +67,7 @@
         },
         {
           "summary": "[RESOLVED] Elevated API issues and Launch Failures",
-          "message": "Between 6:46 AM PST and 12:31 PM PST, we experienced periods of API error rates, as well as connectivity issues for newly launched EC2 instances, primarily affecting a single Availability Zone (apne1-az1) in the AP-NORTHEAST-1 Region. Engineers were automatically engaged and immediately began investigating. The first impact window was between 6:46 AM PST and 9:46 AM PST, and primarily manifested as API errors and failed EC2 instance launches. Other AWS Services that rely on the EC2 APIs for their workflows, such as Autoscaling, ECS, and RDS, were also affected by this issue. Existing EC2 instances were not affected. During this first impact period, customers may have experienced API throttling or 5XX Responses. Additionally, some EC2 RunInstance API calls may have succeeded, but instances did not successfully launch, instead transitioning to a TERMINATED state. EC2 and EBS health data was missing or delayed, which resulted in CloudWatch alarms transitioning to an INSUFFICENT_DATA state. We recommend customers retry failed API requests or workflows that failed for any of the affected services. \n\nAt 9:46 AM, we mitigated the API errors, but had not yet mitigated all issues. While monitoring recovery of the EC2 APIs, we observed that both newly launched EC2 instances and existing instances where the network configuration was modified were experiencing connectivity issues. These connectivity issues were the result of delays in an internal subsytem responsible for propagating EC2 instance networking changes, and related to the underlying root cause. By 12:31 PM PST, we had fully resolved the issue. During this time, we were working on multiple parallel paths to both mitigate the connectivity issues and fully understand the root cause. Other AWS Services that launch EC2 instances or modify EC2 instance networking configuration, such as ECS, EKS, ELB, and NAT Gateway, were also affected by this issue.\n\nA list of impacted services is available below. The issue has been resolved and all services are operating normally. ",
+          "message": "日本時間 2026 年 11 月 11 日 午後 11 時 46 分から 2026 年 11 月 12 日 午前 5 時 31 分にかけて、AP-NORTHEAST-1 リージョンの主に単一のアベイラビリティーゾーン (apne1-az1) において、断続的な API エラー率の上昇、および新規起動された EC2 インスタンスにおける接続の問題が発生しておりました。エンジニアが自動的に対応に加わり、直ちに調査を開始いたしました。最初の影響期間は、日本時間 2026 年 11 月 11 日 午後 11 時 46 分から 2026 年 11 月 12 日 午前 2 時 46 分であり、主に API エラーおよび EC2 インスタンスの起動失敗として現れておりました。Auto Scaling、ECS、RDS など、ワークフローを EC2 API に依存している他の AWS サービスも、この問題の影響を受けておりました。既存の EC2 インスタンスには影響はございませんでした。この最初の影響期間中、お客様には API のスロットリングまたは 5XX レスポンスが発生していた可能性がございます。また、一部の EC2 RunInstances API の呼び出しは成功したものの、インスタンスが正常に起動せず、TERMINATED 状態に移行した場合がございました。EC2 および EBS のヘルスデータが欠損または遅延し、その結果 CloudWatch アラームが INSUFFICIENT_DATA 状態に移行しておりました。影響を受けたサービスにおいて失敗した API リクエストやワークフローにつきましては、再試行いただくことを推奨いたします。\n\n日本時間 午前 2 時 46 分に API エラーを緩和いたしましたが、この時点ではすべての問題は緩和されておりませんでした。EC2 API の回復を監視する中で、新規起動された EC2 インスタンス、およびネットワーク設定が変更された既存のインスタンスの両方で、接続の問題が発生していることを確認いたしました。これらの接続の問題は、EC2 インスタンスのネットワークの変更を伝播する内部サブシステムにおける遅延によるものであり、根本原因に関連するものでございました。日本時間 午前 5 時 31 分までに、問題を完全に解決いたしました。この間、接続の問題の軽減と根本原因の完全な把握の両面から、複数の対策を並行して実施しておりました。ECS、EKS、ELB、NAT Gateway など、EC2 インスタンスを起動する、または EC2 インスタンスのネットワーク設定を変更する他の AWS サービスも、この問題の影響を受けておりました。\n\n影響を受けたサービスの一覧は以下のとおりです。問題は解決され、すべてのサービスは正常に稼働しております。|\n\nBetween 6:46 AM PST and 12:31 PM PST, we experienced periods of API error rates, as well as connectivity issues for newly launched EC2 instances, primarily affecting a single Availability Zone (apne1-az1) in the AP-NORTHEAST-1 Region. Engineers were automatically engaged and immediately began investigating. The first impact window was between 6:46 AM PST and 9:46 AM PST, and primarily manifested as API errors and failed EC2 instance launches. Other AWS Services that rely on the EC2 APIs for their workflows, such as Autoscaling, ECS, and RDS, were also affected by this issue. Existing EC2 instances were not affected. During this first impact period, customers may have experienced API throttling or 5XX Responses. Additionally, some EC2 RunInstance API calls may have succeeded, but instances did not successfully launch, instead transitioning to a TERMINATED state. EC2 and EBS health data was missing or delayed, which resulted in CloudWatch alarms transitioning to an INSUFFICENT_DATA state. We recommend customers retry failed API requests or workflows that failed for any of the affected services. \n\nAt 9:46 AM, we mitigated the API errors, but had not yet mitigated all issues. While monitoring recovery of the EC2 APIs, we observed that both newly launched EC2 instances and existing instances where the network configuration was modified were experiencing connectivity issues. These connectivity issues were the result of delays in an internal subsytem responsible for propagating EC2 instance networking changes, and related to the underlying root cause. By 12:31 PM PST, we had fully resolved the issue. During this time, we were working on multiple parallel paths to both mitigate the connectivity issues and fully understand the root cause. Other AWS Services that launch EC2 instances or modify EC2 instance networking configuration, such as ECS, EKS, ELB, and NAT Gateway, were also affected by this issue.\n\nA list of impacted services is available below. The issue has been resolved and all services are operating normally. ",
           "status": 0,
           "status_label": "Normal",
           "timestamp_unix": 1794431489,
@@ -92,6 +92,13 @@
         {
           "service": "athena-ap-northeast-1",
           "service_name": "Amazon Athena",
+          "current": 0,
+          "max": 1,
+          "status_label": "Normal"
+        },
+        {
+          "service": "backup-ap-northeast-1",
+          "service_name": "AWS Backup",
           "current": 0,
           "max": 1,
           "status_label": "Normal"
@@ -357,6 +364,15 @@
           "timestamp_iso": "2026-11-11T15:40:33+00:00"
         },
         {
+          "service": "backup-ap-northeast-1",
+          "service_name": "AWS Backup",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794411633000,
+          "timestamp_iso": "2026-11-11T15:40:33+00:00"
+        },
+        {
           "service": "cloudwan",
           "service_name": "AWS Cloud WAN",
           "previous_status": "0",
@@ -674,6 +690,15 @@
         {
           "service": "athena-ap-northeast-1",
           "service_name": "Amazon Athena",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794431489000,
+          "timestamp_iso": "2026-11-11T21:11:29+00:00"
+        },
+        {
+          "service": "backup-ap-northeast-1",
+          "service_name": "AWS Backup",
           "previous_status": "1",
           "current_status": "0",
           "status_label": "Normal",
