@@ -1,9 +1,307 @@
 {
-  "generated_at_unix": 1794725908,
-  "generated_at_iso": "2026-11-15T06:58:28.810684+00:00",
+  "generated_at_unix": 1794753576,
+  "generated_at_iso": "2026-11-15T14:39:36.077096+00:00",
   "source": "https://health.aws.amazon.com/public/currentevents",
-  "event_count": 2,
+  "event_count": 3,
   "events": [
+    {
+      "event_id": "AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE_7EB95_9ACD11D39CE",
+      "arn": "arn:aws:health:us-east-1::event/MULTIPLE_SERVICES/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE_7EB95_9ACD11D39CE",
+      "service": "multipleservices-us-east-1",
+      "service_name": "Multiple services",
+      "region": "us-east-1",
+      "region_name": "N. Virginia",
+      "status": 1,
+      "status_label": "Informational",
+      "summary": "Increased Connectivity issues in US-EAST-1",
+      "date_unix": 1794746282,
+      "date_iso": "2026-11-15T12:38:02+00:00",
+      "event_log": [
+        {
+          "summary": "Increased Connectivity issues in US-EAST-1",
+          "message": "We are investigating reports of Connectivity issues in the US-EAST-1 Region. IAM Identity center sign-in requests and AWS SignUp are also impacted at this time.",
+          "status": 1,
+          "status_label": "Informational",
+          "timestamp_unix": 1794746282,
+          "timestamp_iso": "2026-11-15T12:38:02+00:00"
+        },
+        {
+          "summary": "Increased Connectivity issues in US-EAST-1",
+          "message": "We continue to investigate Connectivity issues in the US-EAST-1 Region. IAM Identity center sign-in requests and AWS SignUp are impacted at this time. \n\nWe can confirm errors when attempted to authenticate when using identity center or when using services that rely on IAM Identity center. For Kiro users, logins from social sign in methods are not impacted at this time. There are no workarounds for impacted customers.",
+          "status": 1,
+          "status_label": "Informational",
+          "timestamp_unix": 1794748545,
+          "timestamp_iso": "2026-11-15T13:15:45+00:00"
+        },
+        {
+          "summary": "Increased Connectivity issues in US-EAST-1",
+          "message": "We are seeing early signs of recovery for authentication via IAM Identity Center and SignUp.",
+          "status": 1,
+          "status_label": "Informational",
+          "timestamp_unix": 1794748931,
+          "timestamp_iso": "2026-11-15T13:22:11+00:00"
+        },
+        {
+          "summary": "Increased Connectivity issues in US-EAST-1",
+          "message": "We can confirm recovery for most AWS Services. We have fully mitigated the issue authentication errors from IAM Identity Center that was impacting Kiro, Connect, and other services which rely on IAM Identity Center for authentication.\n\nWe continue to investigate an issue that is affecting a subset of Network Load Balancers in a single cell, in a single Availability Zone (use1-az1) in the US-EAST-1 Region. For customers who need immediate resolution, we recommend creating a new NLB with targets in multiple Availability Zones. We are actively working on multiple parallel paths to mitigate the issue. We will provide an update by 7:30 AM, or sooner if we have additional information to share.",
+          "status": 1,
+          "status_label": "Informational",
+          "timestamp_unix": 1794752627,
+          "timestamp_iso": "2026-11-15T14:23:47+00:00"
+        },
+        {
+          "summary": "Increased Connectivity issues in US-EAST-1",
+          "message": "We are seeing significant signs of recovery and are continuing to monitor for full recovery.",
+          "status": 1,
+          "status_label": "Informational",
+          "timestamp_unix": 1794753176,
+          "timestamp_iso": "2026-11-15T14:32:56+00:00"
+        }
+      ],
+      "impacted_services": [
+        {
+          "service": "awsiotdevicemanagement-us-east-1",
+          "service_name": "AWS IoT Device Management",
+          "current": 0,
+          "max": 1,
+          "status_label": "Normal"
+        },
+        {
+          "service": "cloudwatch-us-east-1",
+          "service_name": "Amazon CloudWatch",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "connect-us-east-1",
+          "service_name": "Amazon Connect",
+          "current": 0,
+          "max": 1,
+          "status_label": "Normal"
+        },
+        {
+          "service": "elasticsearch-us-east-1",
+          "service_name": "Amazon OpenSearch Service",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "elb-us-east-1",
+          "service_name": "Amazon Elastic Load Balancing",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "iamidentitycenter-us-east-1",
+          "service_name": "AWS IAM Identity Center",
+          "current": 0,
+          "max": 1,
+          "status_label": "Normal"
+        },
+        {
+          "service": "kiro-us-east-1",
+          "service_name": "Kiro",
+          "current": 0,
+          "max": 1,
+          "status_label": "Normal"
+        },
+        {
+          "service": "natgateway-us-east-1",
+          "service_name": "AWS NAT Gateway",
+          "current": 1,
+          "max": 1,
+          "status_label": "Informational"
+        },
+        {
+          "service": "signup",
+          "service_name": "AWS Sign Up",
+          "current": 0,
+          "max": 1,
+          "status_label": "Normal"
+        },
+        {
+          "service": "state-us-east-1",
+          "service_name": "AWS Step Functions",
+          "current": 0,
+          "max": 1,
+          "status_label": "Normal"
+        },
+        {
+          "service": "vpclattice-us-east-1",
+          "service_name": "Amazon VPC Lattice",
+          "current": 0,
+          "max": 1,
+          "status_label": "Normal"
+        }
+      ],
+      "status_changes": [
+        {
+          "service": "awsiotdevicemanagement-us-east-1",
+          "service_name": "AWS IoT Device Management",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794746282000,
+          "timestamp_iso": "2026-11-15T12:38:02+00:00"
+        },
+        {
+          "service": "cloudwatch-us-east-1",
+          "service_name": "Amazon CloudWatch",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794746282000,
+          "timestamp_iso": "2026-11-15T12:38:02+00:00"
+        },
+        {
+          "service": "connect-us-east-1",
+          "service_name": "Amazon Connect",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794746282000,
+          "timestamp_iso": "2026-11-15T12:38:02+00:00"
+        },
+        {
+          "service": "elasticsearch-us-east-1",
+          "service_name": "Amazon OpenSearch Service",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794746282000,
+          "timestamp_iso": "2026-11-15T12:38:02+00:00"
+        },
+        {
+          "service": "elb-us-east-1",
+          "service_name": "Amazon Elastic Load Balancing",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794746282000,
+          "timestamp_iso": "2026-11-15T12:38:02+00:00"
+        },
+        {
+          "service": "iamidentitycenter-us-east-1",
+          "service_name": "AWS IAM Identity Center",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794746282000,
+          "timestamp_iso": "2026-11-15T12:38:02+00:00"
+        },
+        {
+          "service": "kiro-us-east-1",
+          "service_name": "Kiro",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794746282000,
+          "timestamp_iso": "2026-11-15T12:38:02+00:00"
+        },
+        {
+          "service": "natgateway-us-east-1",
+          "service_name": "AWS NAT Gateway",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794746282000,
+          "timestamp_iso": "2026-11-15T12:38:02+00:00"
+        },
+        {
+          "service": "signup",
+          "service_name": "AWS Sign Up",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794746282000,
+          "timestamp_iso": "2026-11-15T12:38:02+00:00"
+        },
+        {
+          "service": "state-us-east-1",
+          "service_name": "AWS Step Functions",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794746282000,
+          "timestamp_iso": "2026-11-15T12:38:02+00:00"
+        },
+        {
+          "service": "vpclattice-us-east-1",
+          "service_name": "Amazon VPC Lattice",
+          "previous_status": "0",
+          "current_status": "1",
+          "status_label": "Informational",
+          "timestamp_unix": 1794746282000,
+          "timestamp_iso": "2026-11-15T12:38:02+00:00"
+        },
+        {
+          "service": "awsiotdevicemanagement-us-east-1",
+          "service_name": "AWS IoT Device Management",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794753176000,
+          "timestamp_iso": "2026-11-15T14:32:56+00:00"
+        },
+        {
+          "service": "connect-us-east-1",
+          "service_name": "Amazon Connect",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794753176000,
+          "timestamp_iso": "2026-11-15T14:32:56+00:00"
+        },
+        {
+          "service": "iamidentitycenter-us-east-1",
+          "service_name": "AWS IAM Identity Center",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794753176000,
+          "timestamp_iso": "2026-11-15T14:32:56+00:00"
+        },
+        {
+          "service": "kiro-us-east-1",
+          "service_name": "Kiro",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794753176000,
+          "timestamp_iso": "2026-11-15T14:32:56+00:00"
+        },
+        {
+          "service": "signup",
+          "service_name": "AWS Sign Up",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794753176000,
+          "timestamp_iso": "2026-11-15T14:32:56+00:00"
+        },
+        {
+          "service": "state-us-east-1",
+          "service_name": "AWS Step Functions",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794753176000,
+          "timestamp_iso": "2026-11-15T14:32:56+00:00"
+        },
+        {
+          "service": "vpclattice-us-east-1",
+          "service_name": "Amazon VPC Lattice",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794753176000,
+          "timestamp_iso": "2026-11-15T14:32:56+00:00"
+        }
+      ]
+    },
     {
       "event_id": "AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE_5E6B8_EF2498889B5",
       "arn": "arn:aws:health:me-central-1::event/MULTIPLE_SERVICES/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE_5E6B8_EF2498889B5",
