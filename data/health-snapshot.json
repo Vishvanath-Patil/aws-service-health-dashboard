@@ -1,6 +1,6 @@
 {
-  "generated_at_unix": 1794753576,
-  "generated_at_iso": "2026-11-15T14:39:36.077096+00:00",
+  "generated_at_unix": 1794773499,
+  "generated_at_iso": "2026-11-15T20:11:39.699405+00:00",
   "source": "https://health.aws.amazon.com/public/currentevents",
   "event_count": 3,
   "events": [
@@ -11,9 +11,9 @@
       "service_name": "Multiple services",
       "region": "us-east-1",
       "region_name": "N. Virginia",
-      "status": 1,
-      "status_label": "Informational",
-      "summary": "Increased Connectivity issues in US-EAST-1",
+      "status": 0,
+      "status_label": "Normal",
+      "summary": "[RESOLVED] Increased Connectivity issues in US-EAST-1",
       "date_unix": 1794746282,
       "date_iso": "2026-11-15T12:38:02+00:00",
       "event_log": [
@@ -56,6 +56,14 @@
           "status_label": "Informational",
           "timestamp_unix": 1794753176,
           "timestamp_iso": "2026-11-15T14:32:56+00:00"
+        },
+        {
+          "summary": "[RESOLVED] Increased Connectivity issues in US-EAST-1",
+          "message": "Between 3:05 AM and 6:10 AM PST we experienced signup errors, authentication issues, and connectivity issues in the US-EAST-1 Region. Customers using IAM Identity Center for authentication into the AWS Console, or for authentication into other AWS Services such as Kiro, Connect, etc would have been affected during this time. \n\nEngineers were automatically engaged at 3:10 AM PST and immediately began investigating the root cause, while in parallel working to mitigate both impacts. At 5:20, we fully mitigated the issue affecting authentication, and most AWS Services observed full recovery at this time. \n\nA subset of customers using NLB in a single cell in use1-az1 continued to experience connectivity issues until we fully mitigated the underlying issue at 6:21 AM PST. We recommend customers retry any failed requests. The issue has been resolved and all AWS Services are operating normally.",
+          "status": 0,
+          "status_label": "Normal",
+          "timestamp_unix": 1794754409,
+          "timestamp_iso": "2026-11-15T14:53:29+00:00"
         }
       ],
       "impacted_services": [
@@ -69,9 +77,9 @@
         {
           "service": "cloudwatch-us-east-1",
           "service_name": "Amazon CloudWatch",
-          "current": 1,
+          "current": 0,
           "max": 1,
-          "status_label": "Informational"
+          "status_label": "Normal"
         },
         {
           "service": "connect-us-east-1",
@@ -83,16 +91,16 @@
         {
           "service": "elasticsearch-us-east-1",
           "service_name": "Amazon OpenSearch Service",
-          "current": 1,
+          "current": 0,
           "max": 1,
-          "status_label": "Informational"
+          "status_label": "Normal"
         },
         {
           "service": "elb-us-east-1",
           "service_name": "Amazon Elastic Load Balancing",
-          "current": 1,
+          "current": 0,
           "max": 1,
-          "status_label": "Informational"
+          "status_label": "Normal"
         },
         {
           "service": "iamidentitycenter-us-east-1",
@@ -111,9 +119,9 @@
         {
           "service": "natgateway-us-east-1",
           "service_name": "AWS NAT Gateway",
-          "current": 1,
+          "current": 0,
           "max": 1,
-          "status_label": "Informational"
+          "status_label": "Normal"
         },
         {
           "service": "signup",
@@ -243,8 +251,17 @@
           "previous_status": "1",
           "current_status": "0",
           "status_label": "Normal",
-          "timestamp_unix": 1794753176000,
-          "timestamp_iso": "2026-11-15T14:32:56+00:00"
+          "timestamp_unix": 1794754409000,
+          "timestamp_iso": "2026-11-15T14:53:29+00:00"
+        },
+        {
+          "service": "cloudwatch-us-east-1",
+          "service_name": "Amazon CloudWatch",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794754409000,
+          "timestamp_iso": "2026-11-15T14:53:29+00:00"
         },
         {
           "service": "connect-us-east-1",
@@ -252,8 +269,26 @@
           "previous_status": "1",
           "current_status": "0",
           "status_label": "Normal",
-          "timestamp_unix": 1794753176000,
-          "timestamp_iso": "2026-11-15T14:32:56+00:00"
+          "timestamp_unix": 1794754409000,
+          "timestamp_iso": "2026-11-15T14:53:29+00:00"
+        },
+        {
+          "service": "elasticsearch-us-east-1",
+          "service_name": "Amazon OpenSearch Service",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794754409000,
+          "timestamp_iso": "2026-11-15T14:53:29+00:00"
+        },
+        {
+          "service": "elb-us-east-1",
+          "service_name": "Amazon Elastic Load Balancing",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794754409000,
+          "timestamp_iso": "2026-11-15T14:53:29+00:00"
         },
         {
           "service": "iamidentitycenter-us-east-1",
@@ -261,8 +296,8 @@
           "previous_status": "1",
           "current_status": "0",
           "status_label": "Normal",
-          "timestamp_unix": 1794753176000,
-          "timestamp_iso": "2026-11-15T14:32:56+00:00"
+          "timestamp_unix": 1794754409000,
+          "timestamp_iso": "2026-11-15T14:53:29+00:00"
         },
         {
           "service": "kiro-us-east-1",
@@ -270,8 +305,17 @@
           "previous_status": "1",
           "current_status": "0",
           "status_label": "Normal",
-          "timestamp_unix": 1794753176000,
-          "timestamp_iso": "2026-11-15T14:32:56+00:00"
+          "timestamp_unix": 1794754409000,
+          "timestamp_iso": "2026-11-15T14:53:29+00:00"
+        },
+        {
+          "service": "natgateway-us-east-1",
+          "service_name": "AWS NAT Gateway",
+          "previous_status": "1",
+          "current_status": "0",
+          "status_label": "Normal",
+          "timestamp_unix": 1794754409000,
+          "timestamp_iso": "2026-11-15T14:53:29+00:00"
         },
         {
           "service": "signup",
@@ -279,8 +323,8 @@
           "previous_status": "1",
           "current_status": "0",
           "status_label": "Normal",
-          "timestamp_unix": 1794753176000,
-          "timestamp_iso": "2026-11-15T14:32:56+00:00"
+          "timestamp_unix": 1794754409000,
+          "timestamp_iso": "2026-11-15T14:53:29+00:00"
         },
         {
           "service": "state-us-east-1",
@@ -288,8 +332,8 @@
           "previous_status": "1",
           "current_status": "0",
           "status_label": "Normal",
-          "timestamp_unix": 1794753176000,
-          "timestamp_iso": "2026-11-15T14:32:56+00:00"
+          "timestamp_unix": 1794754409000,
+          "timestamp_iso": "2026-11-15T14:53:29+00:00"
         },
         {
           "service": "vpclattice-us-east-1",
@@ -297,8 +341,8 @@
           "previous_status": "1",
           "current_status": "0",
           "status_label": "Normal",
-          "timestamp_unix": 1794753176000,
-          "timestamp_iso": "2026-11-15T14:32:56+00:00"
+          "timestamp_unix": 1794754409000,
+          "timestamp_iso": "2026-11-15T14:53:29+00:00"
         }
       ]
     },
